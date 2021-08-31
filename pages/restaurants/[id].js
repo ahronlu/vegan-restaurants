@@ -59,7 +59,9 @@ export default function RestaurantPage({ restaurant }) {
 }
 
 export async function getServerSideProps({ params: { id } }) {
-  const res = await fetch(`http://localhost:3000/api/restaurants/${id}`);
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/restaurants/${id}`
+  );
   const { data } = await res.json();
 
   return {
