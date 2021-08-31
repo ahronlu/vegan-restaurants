@@ -3,7 +3,7 @@ import { Container, Grid } from "@material-ui/core";
 
 export default function Home({ restaurants }) {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" style={{ marginTop: 20 }}>
       <Grid container spacing={2}>
         {restaurants.map((restaurant) => (
           <Grid key={restaurant._id} item xs={12} md={3} lg={3}>
