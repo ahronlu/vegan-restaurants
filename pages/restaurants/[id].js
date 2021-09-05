@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 });
 
 export default function RestaurantPage({ restaurant }) {
-  const { name, address, description, img, location : { coordinates : { lat, lng } } } = restaurant;
+  const { name, address, description, img, location : { coordinates } } = restaurant;
 
   const classes = useStyles();
 
@@ -51,7 +51,7 @@ export default function RestaurantPage({ restaurant }) {
           />
         </Grid>
         <Grid item xs={12} md={6} lg={6}>
-          <Map lat={lat} lng={lng} />
+          <Map lat={coordinates[0]} lng={coordinates[1]} />
         </Grid>
       </Grid>
     </Container>
