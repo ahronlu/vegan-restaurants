@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 });
 
 export default function RestaurantPage({ restaurant }) {
-  const { name, address, description, img, lat, lng } = restaurant;
+  const { name, address, description, img, location : { coordinates : { lat, lng } } } = restaurant;
 
   const classes = useStyles();
 
